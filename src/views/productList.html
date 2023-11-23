@@ -1,0 +1,30 @@
+{{> index}}
+
+{{#content}}
+<div class="container mt-5">
+  <h2>Listagem de Produtos</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#products}}
+      <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{name}}</td>
+        <td>{{description}}</td>
+        <td>
+          <a href="/products/edit/{{id}}" class="btn btn-warning">Editar</a>
+          <a href="/products/delete/{{id}}" class="btn btn-danger">Excluir</a>
+        </td>
+      </tr>
+      {{/products}}
+    </tbody>
+  </table>
+</div>
+{{/content}}

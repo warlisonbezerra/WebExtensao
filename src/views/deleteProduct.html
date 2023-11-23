@@ -1,0 +1,12 @@
+{{> index}}
+
+{{#content}}
+<div class="container mt-5">
+  <h2>Exclusão de Produto</h2>
+  <p>Tem certeza de que deseja excluir o produto "{{product.name}}"?</p>
+  <form action="/products/delete/{{product.id}}" method="post">
+    <button type="submit" class="btn btn-danger">Excluir Produto</button>
+    <a href="/products" class="btn btn-secondary">Cancelar</a>
+  </form>
+</div>
+{{/content}}
